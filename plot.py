@@ -100,7 +100,7 @@ def plot_model(df):
 
 
 def plot_params():
-    path = "./../results/amazon_reviews_sklearn_test.csv"
+    path = "./results/amazon_reviews_sklearn_test.csv"
     df = pd.read_csv(path)
     columns = [
         "param_bootstrap",
@@ -179,7 +179,7 @@ def plot_params():
 
 
 def plot_training_data_increase(ax=None):
-    path = "./../results/amazon_reviews_sklearn_collapse_log.csv"
+    path = "./results/amazon_reviews_sklearn_collapse_log.csv"
     df = pd.read_csv(path)
     show = False
     if ax is None:
@@ -213,7 +213,7 @@ def plot_training_data_increase(ax=None):
 
 
 def plot_model_collapse(ax=None):
-    path = "./../results/amazon_reviews_sklearn_collapse_log_cr1.csv"
+    path = "./results/amazon_reviews_sklearn_collapse_log_cr1.csv"
     df = pd.read_csv(path)
     show = False
     if ax is None:
@@ -263,7 +263,7 @@ def plot_model_collapse(ax=None):
 
 
 def plot_collapse_rates(ax=None):
-    path = "./../results/amazon_reviews_sklearn_collapse_rates.csv"
+    path = "./results/amazon_reviews_sklearn_collapse_rates.csv"
     df = pd.read_csv(path)
     show = False
     if ax is None:
@@ -298,8 +298,8 @@ def plot_collapse_rates(ax=None):
 
 
 def plot_collapse_rates_lower(ax=None):
-    path = "./../results/amazon_reviews_sklearn_collapse_rates_lower.csv"
-    path2 = "./../results/amazon_reviews_sklearn_collapse_rates_lower_2.csv"
+    path = "./results/amazon_reviews_sklearn_collapse_rates_lower.csv"
+    path2 = "./results/amazon_reviews_sklearn_collapse_rates_lower_2.csv"
     df = pd.read_csv(path)
     df2 = pd.read_csv(path2)
     df = pd.concat([df, df2])
@@ -340,7 +340,7 @@ def plot_collapse_rates_lower(ax=None):
 
 
 def plot_collapse_rates_detail(ax=None):
-    path = "./../results/amazon_reviews_sklearn_collapse_rates_lower_2.csv"
+    path = "./results/amazon_reviews_sklearn_collapse_rates_lower_2.csv"
     df = pd.read_csv(path)
     show = False
     if ax is None:
@@ -377,14 +377,11 @@ def plot_collapse_rates_detail(ax=None):
 
 
 if __name__ == "__main__":
-    if False:
-        pass
-    else:
-        fig, axes = plt.subplots(2, 3, figsize=(25, 13))
-        plot_training_data_increase(axes[0][0])
-        plot_model_collapse(axes[1][0])
-        plot_collapse_rates(axes[0][1])
-        plot_collapse_rates_lower(axes[1][1])
-        plot_collapse_rates_detail(axes[0][2])
-        plt.tight_layout()
-        plt.show()
+    fig, axes = plt.subplots(2, 3, figsize=(25, 13))
+    plot_training_data_increase(axes[0][0])
+    plot_model_collapse(axes[1][0])
+    plot_collapse_rates(axes[0][1])
+    plot_collapse_rates_lower(axes[1][1])
+    plot_collapse_rates_detail(axes[0][2])
+    plt.tight_layout()
+    plt.show()

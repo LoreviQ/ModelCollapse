@@ -2,10 +2,11 @@ import time
 
 import numpy as np
 import pandas as pd
-from data import load_amazon_reviews_dataset
 from joblib import Parallel, delayed
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
+
+from data import load_amazon_reviews_dataset
 
 
 class CollapseDF:
